@@ -33,7 +33,7 @@ $req_passe->execute(array($id_utilisateur));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes billets - OmnesEvent</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -124,7 +124,7 @@ $req_passe->execute(array($id_utilisateur));
         <p>© <?php echo date('Y'); ?> OmnesEvent - Projet Web Dynamique ING2</p>
     </footer>
 
-    <script src="../js/jquery-4.0.0.min.js"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

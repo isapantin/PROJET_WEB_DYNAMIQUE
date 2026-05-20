@@ -26,7 +26,7 @@ foreach ($evenements as $evt) { $total_inscrits += $evt['nb_inscrits']; }
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon espace - OmnesEvent</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -120,7 +120,7 @@ foreach ($evenements as $evt) { $total_inscrits += $evt['nb_inscrits']; }
         <p>© <?php echo date('Y'); ?> OmnesEvent - Projet Web Dynamique ING2</p>
     </footer>
 
-    <script src="../js/jquery-4.0.0.min.js"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

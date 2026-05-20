@@ -60,7 +60,7 @@ if (isset($_POST['titre'], $_POST['description'], $_POST['date_evenement'], $_PO
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créer un événement - OmnesEvent</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -151,7 +151,7 @@ if (isset($_POST['titre'], $_POST['description'], $_POST['date_evenement'], $_PO
         <p>© <?php echo date('Y'); ?> OmnesEvent - Projet Web Dynamique ING2</p>
     </footer>
 
-    <script src="../js/jquery-4.0.0.min.js"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
