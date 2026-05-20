@@ -495,3 +495,161 @@ th {
     padding: 8px;
     border-radius: 10px;
 }
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+
+    /* NAVBAR */
+
+    header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    nav {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    /* HERO */
+
+    .hero h2 {
+
+        font-size: 45px;
+    }
+
+    .hero p {
+
+        font-size: 20px;
+    }
+
+    /* DETAILS EVENEMENT */
+
+    .detail-evenement {
+
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+    .detail-evenement img {
+
+        width: 100%;
+    }
+
+    /* FORMULAIRES */
+
+    form {
+
+        width: 100%;
+    }
+
+    input,
+    textarea,
+    select {
+
+        width: 100%;
+    }
+
+    /* TABLEAUX ADMIN */
+
+    table {
+
+        display: block;
+
+        overflow-x: auto;
+    }
+}
+
+
+/* TELEPHONE */
+
+@media screen and (max-width: 600px) {
+
+    h1 {
+
+        font-size: 40px;
+    }
+
+    .hero {
+
+        padding: 20px;
+    }
+
+    .hero h2 {
+
+        font-size: 34px;
+
+        line-height: 1.2;
+    }
+
+    .hero p {
+
+        font-size: 18px;
+    }
+
+    /* CARTES EVENEMENTS */
+
+    .grille-evenements {
+
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+    }
+
+    .carte-evenement {
+
+        width: 100%;
+    }
+
+    /* PROFIL */
+
+    .profil-section {
+
+        padding: 20px;
+    }
+
+    /* QR CODE */
+
+    .zone-qr .qr-code {
+
+        width: 140px;
+
+        height: 140px;
+    }
+
+    /* ADMIN */
+
+    .admin-section {
+
+        padding: 20px;
+    }
+
+    /* RECHERCHE */
+
+    .form-recherche {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .form-recherche input,
+    .form-recherche select,
+    .form-recherche button {
+
+        width: 100%;
+    }
+}
