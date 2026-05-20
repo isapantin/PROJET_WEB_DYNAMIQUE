@@ -9,6 +9,17 @@ require("includes/connexion_bdd.php");
 <?php include("includes/header.php"); ?>
 <?php include("includes/menu.php"); ?>
 
+<?php
+
+if(isset($_SESSION['prenom'])) {
+
+    echo "<p class='bonjour'>Bonjour "
+    . $_SESSION['prenom'] .
+    "</p>";
+}
+
+?>
+
 <main>
 
     <section class="hero">
