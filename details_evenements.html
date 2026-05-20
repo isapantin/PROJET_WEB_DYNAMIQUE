@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmnesEvent - Détail événement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<nav class="bg-indigo-700 text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="index.html" class="text-xl font-bold">🎟️ OmnesEvent</a>
+        <button id="btn-burger" class="md:hidden focus:outline-none">
+            <span class="block w-6 h-0.5 bg-white mb-1"></span>
+            <span class="block w-6 h-0.5 bg-white mb-1"></span>
+            <span class="block w-6 h-0.5 bg-white"></span>
+        </button>
+        <ul id="nav-menu" class="hidden md:flex gap-6 items-center text-sm font-medium">
+            <li><a href="index.html" class="hover:underline">Accueil</a></li>
+            <li><a href="evenements.html" class="hover:underline">Événements</a></li>
+        </ul>
+    </div>
+    <ul id="nav-mobile" class="hidden flex-col gap-3 px-4 pb-4 text-sm font-medium">
+        <li><a href="index.html" class="block">Accueil</a></li>
+        <li><a href="evenements.html" class="block">Événements</a></li>
+    </ul>
+</nav>
+
+<main class="max-w-4xl mx-auto px-4 py-10">
+
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+
+        <div class="w-full h-48 bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center text-7xl">
+            🎉
+        </div>
+
+        <div class="p-6 md:p-10">
+            <span class="badge badge-soiree">Soirée</span>
+            <h1 class="text-3xl font-extrabold mt-2 mb-4">Soirée de fin d'année BDE</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600 mb-6">
+                <p>📅 <strong>Date :</strong> 15/06/2025 à 20:00</p>
+                <p>📍 <strong>Lieu :</strong> Salle des fêtes, Lyon</p>
+                <p>👤 <strong>Organisateur :</strong> BDE Omnes</p>
+                <p>👥 <strong>Places :</strong> 45 / 100</p>
+            </div>
+
+            <div class="mb-2 text-sm text-gray-500">Taux de remplissage : <strong>45%</strong></div>
+            <div class="jauge-barre mb-6">
+                <div class="rempli" style="width: 45%"></div>
+            </div>
+
+            <h2 class="text-lg font-bold mb-2 text-gray-700">À propos de l'événement</h2>
+            <p class="text-gray-600 leading-relaxed mb-8">
+                La grande soirée de fin d'année organisée par le BDE ! Au programme : DJ set, buffet, jeux et remise des prix.
+                Venez célébrer la fin de cette belle année avec toute la promo. Entrée gratuite pour les étudiants Omnes.
+            </p>
+
+            <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-4 text-center">
+                <p class="text-indigo-700 mb-3">Connectez-vous pour vous inscrire à cet événement.</p>
+                <a href="login.html" class="btn-principal inline-block">Se connecter</a>
+            </div>
+
+            <div class="mt-8">
+                <a href="evenements.html" class="text-indigo-600 hover:underline text-sm">← Retour aux événements</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-indigo-800 text-white mt-16 py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center text-sm">
+        <p class="font-semibold text-lg mb-2">🎟️ OmnesEvent</p>
+        <p class="text-indigo-300">La plateforme événementielle d'Omnes Éducation</p>
+        <p class="text-indigo-400 mt-4 text-xs">&copy; 2025 OmnesEvent - Projet Web Dynamique ING2</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
