@@ -365,3 +365,27 @@ textarea {
 
     color: #f97316;
 }
+
+/* RECHERCHE */
+
+.recherche-section {
+
+    padding: 30px;
+}
+
+.form-recherche {
+
+    display: flex;
+
+    gap: 20px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.form-recherche input,
+.form-recherche select {
+
+    width: 250px;
+}
