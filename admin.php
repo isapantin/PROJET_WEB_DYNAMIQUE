@@ -99,6 +99,8 @@ Utilisateurs
 
 <td>
 
+<?php if($user['id'] != $_SESSION['id']) { ?>
+
 <a class="btn-delete"
 href="admin.php?supprimer_user=<?php echo $user['id']; ?>">
 
@@ -106,9 +108,13 @@ Supprimer
 
 </a>
 
-</td>
+<?php } else { ?>
 
-</tr>
+Admin actuel
+
+<?php } ?>
+
+</td>
 
 <?php } ?>
 
