@@ -245,3 +245,76 @@ textarea {
 .carte-evenement a:hover {
     background-color: #ea580c;
 }
+
+/* DETAIL EVENEMENT */
+
+.detail-evenement {
+
+    display: flex;
+
+    gap: 40px;
+
+    padding: 50px;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.detail-evenement img {
+
+    width: 500px;
+
+    max-width: 100%;
+
+    border-radius: 15px;
+}
+
+.contenu-evenement {
+
+    flex: 1;
+}
+
+.contenu-evenement h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+    color: #f97316;
+}
+
+.contenu-evenement p {
+
+    margin-bottom: 15px;
+
+    font-size: 18px;
+}
+
+.categorie-detail {
+
+    font-weight: bold;
+
+    color: #f97316;
+}
+
+.btn-reserver {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background-color: #f97316;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+}
+
+.btn-reserver:hover {
+    background-color: #ea580c;
+}
