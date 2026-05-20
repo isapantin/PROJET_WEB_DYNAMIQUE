@@ -14,7 +14,7 @@ $id_user = $_SESSION['id'];
 /* MES RESERVATIONS */
 
 $sql_reservations = "
-SELECT evenements.*
+SELECT evenements.*, reservations.id AS reservation_id
 FROM reservations
 
 INNER JOIN evenements
@@ -100,6 +100,11 @@ mysqli_fetch_assoc($resultat_reservations)) { ?>
 <p>
 📍 <?php echo $event['lieu']; ?>
 </p>
+
+<div class="zone-qr">
+    <img class="qr-code"
+         src="qrcodes/qr_<?php echo $event['reservation_id']; ?>.png">
+</div>
 
 </div>
 

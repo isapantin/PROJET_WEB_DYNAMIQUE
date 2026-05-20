@@ -196,12 +196,9 @@ textarea {
     transform: translateY(-5px);
 }
 
-.carte-evenement img {
-
+.carte-evenement > img {
     width: 100%;
-
-    height: 220px;
-
+    height: 180px;
     object-fit: cover;
 }
 
@@ -454,4 +451,47 @@ th {
     border-radius: 8px;
 
     text-decoration: none;
+}
+
+/* QR CODE */
+
+.qr-code {
+
+    width: 180px;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: contain;
+
+    background-color: white;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    margin: 20px auto;
+
+    display: block;
+}
+
+.profil-section .carte-evenement {
+
+    max-width: 350px;
+
+    margin: auto;
+}
+
+.zone-qr {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.zone-qr .qr-code {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
 }
