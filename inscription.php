@@ -17,11 +17,11 @@ if(isset($_POST['inscription'])) {
     $mot_de_passe_hash = password_hash($mot_de_passe, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO utilisateurs
-    (nom, prenom, email, mot_de_passe, role)
+    (prenom, nom, email, mot_de_passe, role)
 
     VALUES
 
-    ('$nom', '$prenom', '$email', '$mot_de_passe_hash', '$role')";
+    ('$prenom', '$nom', '$email', '$mot_de_passe_hash', '$role')";
 
     if(mysqli_query($bdd, $sql)) {
 

@@ -4,6 +4,35 @@ session_start();
 
 require("includes/connexion_bdd.php");
 
+/* RECHERCHE */
+
+$recherche = "";
+
+$categorie = "";
+
+$sql = "SELECT * FROM evenements WHERE 1";
+
+if(isset($_GET['recherche'])
+&& !empty($_GET['recherche'])) {
+
+    $recherche = mysqli_real_escape_string(
+        $bdd,
+        $_GET['recherche']
+    );
+
+    $sql .= " AND titre LIKE '%$recherche%'";
+}
+
+if(isset($_GET['categorie'])
+&& !empty($_GET['categorie'])) {
+
+    $categorie = $_GET['categorie'];
+
+    $sql .= " AND categorie = '$categorie'";
+}
+
+$sql .= " ORDER BY date_evenement ASC";
+
 /* RECUPERATION EVENEMENTS */
 
 $sql = "SELECT * FROM evenements
@@ -36,6 +65,46 @@ if(isset($_SESSION['prenom'])) {
 <p>
 Plateforme de gestion des événements étudiants d’Omnes.
 </p>
+
+</section>
+
+<section class="recherche-section">
+
+<form method="GET" class="form-recherche">
+
+<input type="text"
+       name="recherche"
+       placeholder="Rechercher un événement">
+
+<select name="categorie">
+
+<option value="">
+Toutes les catégories
+</option>
+
+<option value="Soirée">
+Soirée
+</option>
+
+<option value="Sport">
+Sport
+</option>
+
+<option value="Culture">
+Culture
+</option>
+
+<option value="Conférence">
+Conférence
+</option>
+
+</select>
+
+<button type="submit">
+Rechercher
+</button>
+
+</form>
 
 </section>
 
