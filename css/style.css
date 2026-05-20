@@ -154,3 +154,94 @@ textarea {
 
     font-size: 16px;
 }
+
+/* EVENEMENTS */
+
+.evenements {
+    padding: 50px 30px;
+}
+
+.titre-section {
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-size: 35px;
+}
+
+.grille-evenements {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+}
+
+.carte-evenement {
+
+    background-color: #1f2937;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+
+    transition: 0.3s;
+}
+
+.carte-evenement:hover {
+    transform: translateY(-5px);
+}
+
+.carte-evenement img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.carte-evenement h3 {
+
+    padding: 15px;
+
+    color: #f97316;
+}
+
+.carte-evenement p {
+    padding: 0 15px 15px 15px;
+}
+
+.categorie {
+
+    font-weight: bold;
+
+    color: #f97316;
+}
+
+.carte-evenement a {
+
+    display: block;
+
+    margin: 15px;
+
+    background-color: #f97316;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+}
+
+.carte-evenement a:hover {
+    background-color: #ea580c;
+}
