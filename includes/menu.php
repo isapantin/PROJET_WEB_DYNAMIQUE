@@ -23,6 +23,17 @@
 
         <?php } ?>
 
+        <?php
+        if(isset($_SESSION['role'])
+        && $_SESSION['role'] == 'admin') {
+        ?>
+
+            <a href="admin.php">
+                Dashboard
+            </a>
+
+        <?php } ?>
+
         <?php if(!isset($_SESSION['id'])) { ?>
 
             <a href="connexion.php">
