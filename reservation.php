@@ -3,6 +3,7 @@
 session_start();
 
 require("includes/connexion_bdd.php");
+require("lib/phpqrcode/qrlib.php"); 
 
 /* VERIFICATION CONNEXION */
 
@@ -78,9 +79,37 @@ if(mysqli_num_rows($resultat_verif) > 0) {
 
         if(mysqli_query($bdd, $sql_insert)) {
 
-            $message = "Réservation réussie";
+    /* ID RESERVATION */
 
-        } else {
+    $id_reservation = mysqli_insert_id($bdd);
+
+    /* CONTENU QR CODE */
+
+    $contenu_qr =
+    "Reservation : " . $id_reservation .
+    "\nUtilisateur : " . $_SESSION['prenom'] .
+    "\nEvenement : " . $event['titre'];
+
+    /* NOM IMAGE QR */
+
+    $nom_qr =
+    "qr_" . $id_reservation . ".png";
+
+    /* CHEMIN */
+
+    $chemin_qr =
+    "qrcodes/" . $nom_qr;
+
+    /* GENERATION QR */
+
+    QRcode::png(
+        $contenu_qr,
+        $chemin_qr
+    );
+
+    $message = "Réservation réussie";
+
+} else {
 
             $message = "Erreur lors de la réservation";
         }
