@@ -57,9 +57,34 @@ $event = mysqli_fetch_assoc($resultat);
 <?php echo $event['date_evenement']; ?>
 </p>
 
+<?php
+
+$id_event = $event['id'];
+
+$sql_places = "
+SELECT COUNT(*) AS total
+FROM reservations
+WHERE evenement_id = $id_event
+";
+
+$resultat_places = mysqli_query(
+    $bdd,
+    $sql_places
+);
+
+$places = mysqli_fetch_assoc(
+    $resultat_places
+);
+
+$places_restantes =
+$event['capacite']
+- $places['total'];
+
+?>
+
 <p>
-👥 Capacité :
-<?php echo $event['capacite']; ?> places
+👥 <?php echo $places_restantes; ?>
+places restantes
 </p>
 
 <a class="btn-reserver"
