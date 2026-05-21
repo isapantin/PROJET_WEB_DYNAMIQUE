@@ -108,6 +108,18 @@ src="qrcodes/qr_<?php echo $event['reservation_id']; ?>.png">
 
 </div>
 
+<a class="btn-supprimer"
+
+href="supprimer_reservation.php?id=<?php echo $event['reservation_id']; ?>"
+
+onclick="return confirm(
+'Annuler cette réservation ?'
+)">
+
+Annuler la réservation
+
+</a>
+
 </div>
 
 <?php } ?>
