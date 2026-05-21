@@ -37,7 +37,7 @@ FROM evenements
 WHERE organisateur_id = $id_user
 ";
 
-<a class="btn-supprimer"
+<a class="btn-supprimer">
 
 href="supprimer_evenement.php?id=<?php echo $event['id']; ?>"
 
