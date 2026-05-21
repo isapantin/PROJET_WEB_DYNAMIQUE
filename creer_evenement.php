@@ -28,6 +28,11 @@ if(isset($_POST['creer'])) {
     $categorie = $_POST['categorie'];
 
     $capacite = $_POST['capacite'];
+    
+    if($capacite <= 0) {
+
+    die("Capacité invalide");
+}
 
     $organisateur_id = $_SESSION['id'];
 
@@ -114,7 +119,7 @@ if(isset($_POST['creer'])) {
 
 <input type="number"
        name="capacite"
-       placeholder="Capacité"
+       min="1"
        required>
 
 <input type="file"
