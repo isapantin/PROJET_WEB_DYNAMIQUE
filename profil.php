@@ -37,18 +37,6 @@ FROM evenements
 WHERE organisateur_id = $id_user
 ";
 
-<a class="btn-supprimer">
-
-href="supprimer_evenement.php?id=<?php echo $event['id']; ?>"
-
-onclick="return confirm(
-'Supprimer cet événement ?'
-)">
-
-Supprimer
-
-</a>
-
 $resultat_evenements = mysqli_query(
     $bdd,
     $sql_evenements
@@ -114,8 +102,10 @@ mysqli_fetch_assoc($resultat_reservations)) { ?>
 </p>
 
 <div class="zone-qr">
-    <img class="qr-code"
-         src="qrcodes/qr_<?php echo $event['reservation_id']; ?>.png">
+
+<img class="qr-code"
+src="qrcodes/qr_<?php echo $event['reservation_id']; ?>.png">
+
 </div>
 
 </div>
@@ -154,6 +144,18 @@ mysqli_fetch_assoc($resultat_evenements)) { ?>
 <p>
 📍 <?php echo $event['lieu']; ?>
 </p>
+
+<a class="btn-supprimer"
+
+href="supprimer_evenement.php?id=<?php echo $event['id']; ?>"
+
+onclick="return confirm(
+'Supprimer cet événement ?'
+)">
+
+Supprimer
+
+</a>
 
 </div>
 
