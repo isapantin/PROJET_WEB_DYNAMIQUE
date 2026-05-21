@@ -10,7 +10,12 @@ $recherche = "";
 
 $categorie = "";
 
-$sql = "SELECT * FROM evenements WHERE 1";
+/* REQUETE SQL */
+
+$sql = "SELECT * FROM evenements
+WHERE date_evenement >= CURDATE()";
+
+/* RECHERCHE TEXTE */
 
 if(isset($_GET['recherche'])
 && !empty($_GET['recherche'])) {
@@ -20,23 +25,37 @@ if(isset($_GET['recherche'])
         $_GET['recherche']
     );
 
-    $sql .= " AND titre LIKE '%$recherche%'";
+    $sql .= " AND (
+
+        titre LIKE '%$recherche%'
+
+        OR description LIKE '%$recherche%'
+
+        OR lieu LIKE '%$recherche%'
+
+        OR categorie LIKE '%$recherche%'
+
+    )";
 }
+
+/* FILTRE CATEGORIE */
 
 if(isset($_GET['categorie'])
 && !empty($_GET['categorie'])) {
 
-    $categorie = $_GET['categorie'];
+    $categorie = mysqli_real_escape_string(
+        $bdd,
+        $_GET['categorie']
+    );
 
     $sql .= " AND categorie = '$categorie'";
 }
 
+/* TRI PAR DATE */
+
 $sql .= " ORDER BY date_evenement ASC";
 
-/* RECUPERATION EVENEMENTS */
-
-$sql = "SELECT * FROM evenements
-ORDER BY date_evenement ASC";
+/* EXECUTION */
 
 $resultat = mysqli_query($bdd, $sql);
 
@@ -74,7 +93,8 @@ Plateforme de gestion des événements étudiants d’Omnes.
 
 <input type="text"
        name="recherche"
-       placeholder="Rechercher un événement">
+       placeholder="Rechercher un événement"
+       value="<?php echo $recherche; ?>">
 
 <select name="categorie">
 
@@ -82,19 +102,23 @@ Plateforme de gestion des événements étudiants d’Omnes.
 Toutes les catégories
 </option>
 
-<option value="Soirée">
+<option value="Soirée"
+<?php if($categorie == "Soirée") echo "selected"; ?>>
 Soirée
 </option>
 
-<option value="Sport">
+<option value="Sport"
+<?php if($categorie == "Sport") echo "selected"; ?>>
 Sport
 </option>
 
-<option value="Culture">
+<option value="Culture"
+<?php if($categorie == "Culture") echo "selected"; ?>>
 Culture
 </option>
 
-<option value="Conférence">
+<option value="Conférence"
+<?php if($categorie == "Conférence") echo "selected"; ?>>
 Conférence
 </option>
 
