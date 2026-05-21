@@ -37,6 +37,18 @@ FROM evenements
 WHERE organisateur_id = $id_user
 ";
 
+<a class="btn-supprimer"
+
+href="supprimer_evenement.php?id=<?php echo $event['id']; ?>"
+
+onclick="return confirm(
+'Supprimer cet événement ?'
+)">
+
+Supprimer
+
+</a>
+
 $resultat_evenements = mysqli_query(
     $bdd,
     $sql_evenements
