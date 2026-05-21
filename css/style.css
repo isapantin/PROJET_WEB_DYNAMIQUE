@@ -574,67 +574,172 @@ th {
 }
 
 
-/* TELEPHONE */
+/* ========================= */
+/* RESPONSIVE TABLETTE */
+/* ========================= */
+
+@media screen and (max-width: 900px) {
+
+    /* HEADER */
+
+    header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    nav {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    nav a {
+
+        font-size: 15px;
+    }
+
+    /* HERO */
+
+    .hero {
+
+        padding: 30px;
+    }
+
+    .hero h2 {
+
+        font-size: clamp(40px, 7vw, 70px);
+
+        line-height: 1.2;
+
+        text-align: center;
+    }
+
+    .hero p {
+
+        font-size: clamp(18px, 3vw, 24px);
+
+        text-align: center;
+    }
+
+    /* DETAILS EVENEMENT */
+
+    .detail-evenement {
+
+        flex-direction: column;
+
+        padding: 30px;
+    }
+
+    .detail-evenement img {
+
+        width: 100%;
+
+        max-width: 500px;
+    }
+
+    .contenu-evenement {
+
+        width: 100%;
+    }
+
+    /* FORMULAIRES */
+
+    .formulaire-section {
+
+        width: 90%;
+
+        max-width: 400px;
+    }
+
+    form {
+
+        width: 100%;
+    }
+
+    input,
+    textarea,
+    select {
+
+        width: 100%;
+    }
+
+    /* TABLEAUX ADMIN */
+
+    table {
+
+        display: block;
+
+        overflow-x: auto;
+    }
+}
+
+
+/* ========================= */
+/* RESPONSIVE TELEPHONE */
+/* ========================= */
 
 @media screen and (max-width: 600px) {
 
-    h1 {
+    /* HEADER */
 
-        font-size: 40px;
+    header {
+
+        padding: 20px 15px;
     }
 
+    h1 {
+
+        font-size: 36px;
+
+        text-align: center;
+    }
+
+    nav {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    nav a {
+
+        font-size: 14px;
+    }
+
+    /* HERO */
+
     .hero {
+
+        min-height: 70vh;
 
         padding: 20px;
     }
 
     .hero h2 {
 
-        font-size: 34px;
+        font-size: clamp(32px, 9vw, 50px);
 
         line-height: 1.2;
+
+        margin-bottom: 20px;
     }
 
     .hero p {
 
         font-size: 18px;
-    }
 
-    /* CARTES EVENEMENTS */
-
-    .grille-evenements {
-
-        grid-template-columns: 1fr;
-
-        padding: 15px;
-    }
-
-    .carte-evenement {
-
-        width: 100%;
-    }
-
-    /* PROFIL */
-
-    .profil-section {
-
-        padding: 20px;
-    }
-
-    /* QR CODE */
-
-    .zone-qr .qr-code {
-
-        width: 140px;
-
-        height: 140px;
-    }
-
-    /* ADMIN */
-
-    .admin-section {
-
-        padding: 20px;
+        line-height: 1.5;
     }
 
     /* RECHERCHE */
@@ -644,6 +749,8 @@ th {
         flex-direction: column;
 
         align-items: center;
+
+        width: 100%;
     }
 
     .form-recherche input,
@@ -651,6 +758,104 @@ th {
     .form-recherche button {
 
         width: 100%;
+
+        max-width: 350px;
+    }
+
+    /* CARTES EVENEMENTS */
+
+    .grille-evenements {
+
+        grid-template-columns: 1fr;
+
+        padding: 10px;
+    }
+
+    .carte-evenement {
+
+        width: 100%;
+    }
+
+    .carte-evenement > img {
+
+        height: 180px;
+    }
+
+    /* PROFIL */
+
+    .profil-section {
+
+        padding: 20px;
+    }
+
+    .infos-profil {
+
+        padding: 20px;
+    }
+
+    .titre-profil {
+
+        font-size: 26px;
+    }
+
+    /* QR CODE */
+
+    .zone-qr {
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+    .zone-qr .qr-code {
+
+        width: 140px;
+
+        height: 140px;
+
+        object-fit: contain;
+    }
+
+    /* DETAIL EVENEMENT */
+
+    .detail-evenement {
+
+        padding: 20px;
+    }
+
+    .contenu-evenement h2 {
+
+        font-size: 32px;
+    }
+
+    .contenu-evenement p {
+
+        font-size: 16px;
+    }
+
+    /* ADMIN */
+
+    .admin-section {
+
+        padding: 20px;
+    }
+
+    th,
+    td {
+
+        padding: 10px;
+
+        font-size: 14px;
+    }
+
+    /* BOUTONS */
+
+    .btn-reserver,
+    .btn-supprimer {
+
+        width: 100%;
+
+        text-align: center;
     }
 }
 
